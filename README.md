@@ -52,3 +52,7 @@ If the shortcut is already off in System Settings, the app leaves it alone.
   game running" during a game. Switch to **Whenever GeForce NOW Is in Front** until the markers
   are updated in `StreamLogWatcher.swift`.
 - It covers the GeForce NOW app, not play.geforcenow.com in a browser.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
