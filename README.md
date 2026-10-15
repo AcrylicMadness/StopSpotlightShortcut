@@ -3,16 +3,36 @@
 A menu bar app that turns off the Spotlight shortcut (⌘Space) while you're in a GeForce NOW
 game, so a missed Space doesn't pull the game out of focus and leave keys stuck.
 
-## Build and install
+## Install
 
-Needs only the Xcode Command Line Tools.
+Download the DMG from [Releases](https://github.com/AcrylicMadness/StopSpotlightShortcut/releases),
+drag the app to Applications, and turn on **Launch at Login** from its menu. Requires macOS 14
+or later.
+
+## Build
+
+Needs Xcode. The Command Line Tools alone don't include `actool`, which compiles the icon.
 
 ```sh
-./build.sh            # builds build/StopSpotlightShortcut.app
+./build.sh            # builds build/StopSpotlightShortcut.app (universal)
 ./build.sh install    # also copies it to /Applications and launches it
 ```
 
-Turn on **Launch at Login** from its menu once it's in /Applications.
+To make a release DMG, run `./release.sh`. It signs the app with your Developer ID
+certificate, notarizes and staples both the app and the DMG, and writes
+`build/StopSpotlightShortcut-<version>.dmg`. The script's header explains the one-time
+notarization setup. Then:
+
+```sh
+gh release create v1.0 build/StopSpotlightShortcut-1.0.dmg --title "Stop Spotlight Shortcut 1.0"
+```
+
+## Icon
+
+`Resources/AppIcon.icon` is an Icon Composer document; open it in Icon Composer to edit it.
+It's original artwork. Apple's license doesn't allow SF Symbols, or look-alikes, in app icons.
+The menu bar item does use the system `gamecontroller` symbol, because in-app UI is what SF
+Symbols are licensed for.
 
 ## Menu
 

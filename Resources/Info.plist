@@ -8,8 +8,12 @@
 	<string>Stop Spotlight Shortcut</string>
 	<key>CFBundleExecutable</key>
 	<string>StopSpotlightShortcut</string>
+	<key>CFBundleIconFile</key>
+	<string>AppIcon</string>
+	<key>CFBundleIconName</key>
+	<string>AppIcon</string>
 	<key>CFBundleIdentifier</key>
-	<string>local.StopSpotlightShortcut</string>
+	<string>io.github.acrylicmadness.StopSpotlightShortcut</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
